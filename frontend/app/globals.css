@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #0b0b0d; color: #e6e6ea; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+.markdown h1 { font-size: 1.5rem; font-weight: 600; margin: 0.6em 0; }
+.markdown h2 { font-size: 1.25rem; font-weight: 600; margin: 0.6em 0; }
+.markdown h3 { font-size: 1.1rem; font-weight: 600; margin: 0.5em 0; }
+.markdown p  { margin: 0.5em 0; }
+.markdown code { background: #1c1c21; padding: 0.1em 0.3em; border-radius: 4px; }
+.markdown pre  { background: #1c1c21; padding: 0.75em; border-radius: 6px; overflow-x: auto; }
+.markdown ul, .markdown ol { padding-left: 1.5em; margin: 0.5em 0; }
+.markdown a { color: #5e6ad2; text-decoration: underline; }
