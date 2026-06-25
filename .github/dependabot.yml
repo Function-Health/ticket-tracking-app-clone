@@ -1,0 +1,19 @@
+version: 2
+registries:
+  internal-pypi-registry:
+    type: python-index
+    url: "https://us-central1-python.pkg.dev/platform-services-8675309/fh-pypi-gateway/simple/"
+    workload-identity-provider: ${{ secrets.PLATFORM_GCP_WORKLOAD_IDENTITY_PROVIDER }}
+    service-account: ${{ secrets.PLATFORM_GCP_WORKLOAD_IDENTITY_PROVIDER_SA }}
+    replaces-base: true
+updates:
+  - package-ecosystem: "pip"
+    insecure-external-code-execution: "allow"
+    directories:
+      - "/"
+    registries:
+      - "internal-pypi-registry"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps)"
